@@ -14,9 +14,16 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Jaylord Manila – Full Stack Developer",
+  description: "Fullstack developer building scalable and efficient web applications. ",
+  authors: [{name: "Jaylord Manila"}],
+  openGraph: {
+    title: "Jaylord Manila – Full Stack Developer",
+    description: "Fullstack developer building scalable and efficient web applications.",
+    url: "https://jhaylhord.vercel.app/",
+    siteName: "Jaylord Manila Portfolio",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
