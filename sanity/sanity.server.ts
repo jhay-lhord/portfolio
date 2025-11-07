@@ -1,12 +1,9 @@
-import { createClient, type ClientConfig } from "@sanity/client";
+import { createClient } from "@sanity/client";
 
-const config: ClientConfig = {
+export const sanityServer = createClient({
   projectId: process.env.SANITY_PROJECT_ID!,
   dataset: process.env.SANITY_DATASET!,
-  apiVersion: process.env.SANITY_API_VERSION,
+  apiVersion: process.env.SANITY_API_VERSION!,
+  token: process.env.SANITY_API_TOKEN!,
   useCdn: process.env.NODE_ENV === "production",
-};
-
-const sanityServer = createClient(config);
-
-export default sanityServer;
+});

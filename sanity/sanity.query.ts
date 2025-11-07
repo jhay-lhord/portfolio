@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import sanityServer from "./sanity.server";
+import {sanityServer} from "./sanity.server";
 
 export async function getExperience() {
   return sanityServer.fetch(

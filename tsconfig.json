@@ -19,9 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./app/(site)/*"],
+      "@/types": ["./types/index.ts"],
+      "@/sanity/*": ["./sanity/*"],
+      "@/sanity.config": ["./sanity.config.ts"],
+      "@/lib/*": ["./lib/*"]
     }
-  },
+  },  
   "include": [
     "next-env.d.ts",
     "**/*.ts",
