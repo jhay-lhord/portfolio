@@ -5,13 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image"
-import { getProjects } from "@/sanity/sanity.query";
 import { ProjectType } from "@/types";
 
-
-const projects: ProjectType[] = await getProjects();
-
-export default function Projects() {
+export default function Projects({projects}: {projects: ProjectType[] }) {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-7xl mx-auto">

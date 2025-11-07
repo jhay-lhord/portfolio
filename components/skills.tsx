@@ -2,12 +2,10 @@
 
 import { Card } from "@/components/ui/card"
 import * as LucideIcons from "lucide-react"
-import { getSkills } from "@/sanity/sanity.query"
 import { SkillType } from "@/types"
 
-const skills: SkillType[] = await getSkills()
 
-export default function Skills() {
+export default function Skills({skills}: {skills: SkillType[]}) {
   return (
     <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">

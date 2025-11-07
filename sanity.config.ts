@@ -2,14 +2,15 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
-import { sanityConfig } from './lib/sanity.config'
 
 
 export default defineConfig({
   name: 'default',
   title: 'portfolio-sanity',
 
-  ...sanityConfig,
+  projectId: process.env.SANITY_PROJECT_ID!,
+  dataset: process.env.SANITY_DATASET!,
+  apiVersion: process.env.SANITY_API_VERSION,
 
   plugins: [structureTool(), visionTool()],
 

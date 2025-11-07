@@ -1,8 +1,8 @@
 import { groq } from "next-sanity";
-import client from "./sanity.client";
+import sanityServer from "./sanity.server";
 
 export async function getExperience() {
-  return client.fetch(
+  return sanityServer.fetch(
     groq`*[_type == "experience"]{
       _id,
       title,
@@ -15,7 +15,7 @@ export async function getExperience() {
 }
 
 export async function getSkills() {
-  return client.fetch(
+  return sanityServer.fetch(
     groq`*[_type == "skills"]{
       _id,
       category,
@@ -27,7 +27,7 @@ export async function getSkills() {
 }
 
 export async function getProjects() {
-  return client.fetch(
+  return sanityServer.fetch(
     groq`*[_type == "projects"]{
       _id,
       title,
