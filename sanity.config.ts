@@ -8,11 +8,13 @@ export default defineConfig({
   name: 'default',
   title: 'portfolio-sanity',
 
-  projectId: process.env.SANITY_PROJECT_ID!,
-  dataset: process.env.SANITY_DATASET!,
-  apiVersion: process.env.SANITY_API_VERSION,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION!,
 
   plugins: [structureTool(), visionTool()],
+
+  basePath: "/studio",
 
   schema: {
     types: schemaTypes,

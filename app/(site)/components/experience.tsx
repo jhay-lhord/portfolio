@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { Badge } from "@/components/ui/badge";
 import type { ExperienceType } from "@/types";
 
-export default async function Experience({experiences} : {experiences: ExperienceType[]}) {
+export default function Experience({experiences} : {experiences: ExperienceType[]}) {
 
   const timelineData = experiences.map((exp) => ({
     title: exp.period,
