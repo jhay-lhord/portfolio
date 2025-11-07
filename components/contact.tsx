@@ -95,7 +95,6 @@ export default function Contact() {
           })}
         </div>
 
-        {/* Form section */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg opacity-10 blur-2xl" />
           <Card className="relative p-8 sm:p-12 border border-blue-500/20 hover:border-blue-500/40 transition-colors">
