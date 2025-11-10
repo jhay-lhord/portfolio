@@ -19,8 +19,8 @@ const skills = {
             validation: (Rule) => Rule.required(),
         }),
         defineField({
-            name: "color",
-            title: "Color",
+            name: "gradient",
+            title: "Gradient",
             type: "string",
             validation: (Rule) => Rule.required(),
         }),

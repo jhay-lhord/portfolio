@@ -75,7 +75,6 @@
 }
 
 @theme inline {
-  /* updated fonts to developer-focused ones */
   --font-sans: "Space Grotesk", "Space Grotesk Fallback";
   --font-mono: "Fira Code", "Fira Code Fallback";
   --color-background: var(--background);
@@ -125,12 +124,12 @@
   }
 }
 
-/* Smooth scrolling */
+@source "safelist-tailwindcss.txt";
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient for text */
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }

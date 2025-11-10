@@ -6,12 +6,14 @@ import Skills from "./components/skills"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
 
-import type { ExperienceType, ProjectType, SkillType } from "@/types"
-import { getExperience, getProjects, getSkills } from "@/sanity/sanity.query";
+import type { ExperienceType, ProjectType, SkillType, ContactType } from "@/types"
+import { getExperience, getProjects, getSkills, getContactInfo } from "@/sanity/sanity.query";
 
 const projects: ProjectType[] = await getProjects();
 const experiences: ExperienceType[] = await getExperience();
 const skills: SkillType[] = await getSkills();
+const contactInfo: ContactType[] = await getContactInfo();
+
 
 export default function Home() {
   return (
@@ -21,7 +23,7 @@ export default function Home() {
       <Projects projects={projects} />
       <Experience experiences={experiences} />
       <Skills skills={skills} />
-      <Contact />
+      <Contact contactInfo={contactInfo} />
       <Footer />
     </main>
   )

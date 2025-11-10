@@ -29,12 +29,12 @@ export default function Skills({skills}: {skills: SkillType[]}) {
                 className="relative overflow-hidden p-8 bg-background/50 backdrop-blur-md border border-border/20 hover:border-primary/50 hover:shadow-lg hover:scale-[1.02] transition-transform duration-300 rounded-2xl group"
               >
                 <div
-                  className={`absolute -right-16 -top-16 w-40 h-40 ${category.color} opacity-10 rounded-full blur-3xl animate-pulse-slow`}
+                  className={`absolute -right-16 -top-16 w-40 h-40 ${category.gradient} opacity-10 rounded-full blur-3xl animate-pulse-slow`}
                 />
 
                 <div className="relative z-10 mb-6">
                   <div
-                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} p-3 mb-4 transition-transform duration-300 group-hover:scale-110`}
+                    className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${category.gradient} p-3 mb-4 transition-transform duration-300 group-hover:scale-110`}
                   >
                     <IconComponent className="w-7 h-7 text-white" />
                   </div>

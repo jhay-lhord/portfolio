@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect"
 export default function Hero() {
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 py-24 overflow-hidden bg-gradient-to-b from-background via-background/90 to-background/60">
+    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 py-16 overflow-hidden bg-gradient-to-b from-background via-background/90 to-background/60">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/3 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-10 animate-pulse" />
         <div className="absolute bottom-1/3 -right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-10 animate-pulse delay-1000" />
