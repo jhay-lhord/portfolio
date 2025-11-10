@@ -20,8 +20,22 @@ export async function getSkills() {
       _id,
       category,
       icon,
-      color,
+      gradient,
       skills
+    }`
+  );
+}
+
+export async function getContactInfo() {
+  return sanityServer.fetch(
+    groq`*[_type == "contact"]{
+      _id,
+      icon,
+      title,
+      value,
+      link,
+      gradient,
+      border
     }`
   );
 }

@@ -7,9 +7,11 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import * as LucideIcons from "lucide-react"
+import { ContactType } from "@/types"
 import { useState } from "react"
 
-export default function Contact() {
+export default function Contact({ contactInfo }: { contactInfo: ContactType[] }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -71,24 +73,24 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {contactMethods.map((method) => {
-            const Icon = method.icon
+          {contactInfo.map((contact) => {
+            const Icon = (LucideIcons as any)[contact.icon] || LucideIcons.HelpCircle
             return (
               <div
-                key={method.title}
+                key={contact.title}
                 className="group relative text-center p-8 rounded-lg border border-foreground/10 hover:border-foreground/20 transition-all duration-300 hover:shadow-lg"
               >
                 <div
-                  className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${method.gradient} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${contact.gradient} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                 >
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-xl mb-3">{method.title}</h3>
+                <h3 className="font-bold text-xl mb-3">{contact.title}</h3>
                 <a
-                  href={method.href}
+                  href={contact.link}
                   className="text-muted-foreground hover:text-blue-400 transition-colors font-medium break-all"
                 >
-                  {method.value}
+                  {contact.value}
                 </a>
               </div>
             )
@@ -103,7 +105,7 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-foreground">Full Name</label>
                   <Input
-                    placeholder="John Doe"
+                    placeholder="Jaylord Manila"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
@@ -114,7 +116,7 @@ export default function Contact() {
                   <label className="block text-sm font-semibold text-foreground">Email Address</label>
                   <Input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="jaylord@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -135,7 +137,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-6 flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
+                className="bg-gradient-to-br from-blue-600 to-cyan-600  text-white font-semibold py-6 flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
               >
                 <Send className="w-5 h-5" />
                 <span>{submitted ? "Message Sent!" : "Send Message"}</span>
