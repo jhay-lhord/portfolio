@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Jaylord Manila – Full Stack Developer",
   description: "Fullstack developer building scalable and efficient web applications. ",
   authors: [{name: "Jaylord Manila"}],
+  alternates: {
+  canonical: "https://jhaylhord.vercel.app/",
+  },
   openGraph: {
     title: "Jaylord Manila – Full Stack Developer",
     description: "Fullstack developer building scalable and efficient web applications.",
