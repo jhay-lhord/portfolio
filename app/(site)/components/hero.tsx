@@ -85,7 +85,7 @@ export default function Hero() {
             size="lg"
             className="gap-2 group transition-all duration-300 hover:scale-105 shadow-md hover:shadow-xl"
           >
-            View My Work
+            <a href="#projects">View My Work</a>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button
@@ -94,7 +94,7 @@ export default function Hero() {
             className="gap-2 hover:scale-105 transition-transform duration-300 bg-transparent"
           >
             <Mail size={20} />
-            Get in Touch
+            <a href="#contact">Get in Touch</a>
           </Button>
         </motion.div>
 

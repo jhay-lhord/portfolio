@@ -23,7 +23,7 @@ export default function Projects({projects}: {projects: ProjectType[] }) {
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative h-48 overflow-hidden bg-muted">
                 <Image
-                  src={urlFor(project.image).width(1600).quality(100).url()}
+                  src={urlFor(project.image).url()}
                   alt={project.title}
                   width={100}
                   height={100}
