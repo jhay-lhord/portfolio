@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap --config next-sitemap.config.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
